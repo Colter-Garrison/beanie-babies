@@ -28,7 +28,7 @@ function App() {
         {/* also, disable this button when you are on the first page */}
         <button disabled={page <= 1} onClick={() => setPage(page - 1)}>Previous Page</button>
         {/* on click, this button should increment the page in state  */}
-        <button>Next Page</button>
+        <button disabled={page >= 53} onClick={() => setPage(page + 1)}>Next Page</button>
       </div>
       <BeaniesList beanieBabies={beanieBabies}/>
       {/* pass the beanie babies into the BeaniesList component */}
